@@ -1,0 +1,8 @@
+.about {
+    background-color: var(--clr-light);
+}
+.about p {
+    max-width: 55ch;
+    font-size: var(--fs-body);
+    padding-bottom: 2em;
+}

@@ -1,0 +1,85 @@
+:root {
+    --button-border-clr: var(--clr-accent-500);
+}
+
+/* Top and Right */
+.button {
+    width: 5em;
+    height: 2.5em;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+}
+
+.button::before,
+.button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: transform 0.3s ease-out;
+    z-index: -1;
+}
+
+.button::before {
+    transform: scale(0, 1);
+    transform-origin: left center;
+    border-top: 1px solid var(--button-border-clr);
+}
+.button:hover::before {
+    transform: scale(1, 1);
+}
+
+.button::after {
+    transform: scale(1, 0);
+    transform-origin: top center;
+    border-right: 2px solid var(--button-border-clr);
+}
+
+.button:hover::after {
+    transform: scale(1, 1);
+}
+
+/* Bottom and Left*/
+
+.header__button-overlay {
+    width: 5em;
+    height: 2.5em;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: none;
+}
+.header__button-overlay::before,
+.header__button-overlay::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: transform 0.3s ease-out;
+    z-index: -2;
+}
+
+.header__button-overlay::before {
+    border-bottom: 2px solid var(--button-border-clr);
+    transform: scale(0, 1);
+    transform-origin: right center;
+}
+.header__button-overlay:hover::before {
+    transform: scale(1, 1);
+}
+.header__button-overlay::after {
+    border-left: 1px solid var(--button-border-clr);
+    transform: scale(1, 0);
+    transform-origin: bottom center;
+}
+.header__button-overlay:hover::after {
+    transform: scale(1, 1);
+}

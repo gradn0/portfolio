@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nathan Gradden</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kristi&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <!-- Links -->
+    <link rel="stylesheet" href="styles/style.css">
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="header ">
+      <div class="header__left">
+        <p id="logo"><span>&lt;</span>JD<span>/></span></p>
+        <span class="desktop-only"><button id="theme-button"><img src="/images/ui/theme.png" alt=""></button></span>
+      </div>
+      
+      <nav class="desktop-only">
+        <ul class="header__links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Porfolio</a></li>
+          <li><span class="verticalbar"></span></li>
+          <button class="header__button | button">CV<span class="header__button-overlay"></span></button> 
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <div class="hero | equal-columns container">
+      <div class="hero__title | center-item">
+        <div class="hero__title-wrapper">
+          <h1>Nathan Gradden</h1>
+          <h2>Front-end Developer</h2>
+          <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin 
+            literature from 45 BC, making it over 2000 years old. Richard McClintock</p>
+          <!-- Skills List --> 
+          <div class="hero__skills-mobile | mobile-only">
+            <ul class="hero__list-items">
+              <li class="skill-mobile"><img src="/images/skills/html.png" alt=""></li>
+              <li class="skill-mobile"><img src="/images/skills/css.png" alt=""></li>
+              <li class="skill-mobile"><img src="/images/skills/javascript.png" alt=""></li>
+              <li class="skill-mobile"><img src="/images/skills/git.png" alt=""></li>
+              <li class="skill-mobile"><img src="/images/skills/bootstrap.png" alt=""></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Skills wheel -->
+      <div class="hero__skills">
+        <div class="skills-text-container">
+          <p class="skill-text"></p>
+          <div class="skills-text-overlay"></div>
+        </div>
+        <div class="skills__center | center-item">
+          <div class="sk-html | node"><img class="node-img" src="/images/skills/html.png" alt=""></div>
+          <div class="html-ln | line"></div>
+          <div class="sk-css | node"><img class="node-img" src="/images/skills/css.png" alt=""></div>
+          <div class="css-ln | line"></div>
+          <div class="sk-js | node"><img class="node-img" src="/images/skills/javascript.png" alt=""></div>
+          <div class="js-ln | line"></div>
+          <div class="sk-git | node"><img class="node-img" src="/images/skills/git.png" alt=""></div>
+          <div class="git-ln | line"></div>
+          <div class="sk-bootstrap | node"><img  class="node-img" src="/images/skills/bootstrap.png" alt=""></div>
+          <div class="bootstrap-ln | line"></div>
+        </div>
+      </div> 
+    </div>
+
+    <!-- About -->
+    <div class="about | container section">
+      <h2 class="heading">About</h2>
+      <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin 
+        literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College 
+        in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through 
+        the cites of the word in classical literature, discovered the undoubtable source</p>
+    </div>
+
+    <!-- Portfolio -->
+    <div class="portfolio | container section">
+      <h2 class="heading">Portfolio</h2>
+      <div class="portfolio__projects | grid container">
+        <div class="portfolio__project">
+          <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
+        </div>
+        <div class="portfolio__project">
+          <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
+        </div>
+        <div class="portfolio__project">
+          <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,201 @@
+:root{
+    --node-size: 2.9em;
+    --label-maxchars: 10;
+    --typing-speed: 1s;
+
+    --r: 13em;
+    --n: 5;
+    --html-angle: calc(360deg/var(--n)*1);
+    --css-angle: calc(360deg/var(--n)*2);
+    --js-angle: calc(360deg/var(--n)*3);
+    --git-angle: calc(360deg/var(--n)*4);
+    --bootstrap-angle: calc(360deg/var(--n)*5);
+}
+
+.hero__skills {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 5em;
+    transform: translateX(-0.8em);
+    scale: 0.6;
+    margin-top: 2em;
+}
+
+.skills__center {
+    position: relative;
+    animation: infRotate 150s infinite linear;
+    transform: scale(0.85);
+}
+
+
+/* Node styling */
+.node {
+    background: var(--clr-800);
+    width: var(--node-size);
+    height: var(--node-size);
+    border-radius: 50%;
+    position: absolute;   
+    cursor: pointer;
+    z-index: 0;
+    animation: grow 0.7s ease-out forwards;
+    box-shadow: 0.1em 0.1em 2em 0em #888686;
+}
+
+.node img {
+    animation: infRotateRev 150s infinite linear;
+    border-radius: 50%;
+    padding: 0.5em;
+    object-position: center;
+}
+
+.line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, transparent 40%, var(--clr-light) 45%, var(--clr-dark) 100%);
+    /* background: black; */
+    position: absolute;
+    transform-origin: left;
+    animation: lineGrow 0.9s ease-out forwards;
+    z-index: 1;
+}
+
+/* Hover effects */
+.skills-text-container {
+    z-index: 0;
+    width: 12ch;
+    height: 2.2em;
+    transform: translate(3.8em, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.skill-text {
+    font-family: "Source Code Pro", monospace;
+    z-index: 1;
+    width: calc(var(--label-maxchars)*1ch);
+    height: 2.2em;
+    text-align: center;
+}
+.skills-text-overlay {
+    position: absolute;
+    z-index: 2;
+    width: calc(1ch*var(--label-maxchars));
+    height: 2.2em;
+    background-color: white;
+}
+
+@keyframes infRotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(359deg);}
+}
+@keyframes infRotateRev {
+    from {transform: rotate(359deg);}
+    to {transform: rotate(0deg);}
+}
+@keyframes grow {
+    from {transform: none}
+}
+@keyframes lineGrow {
+    from {width: 0; transform: rotate(-180deg);}
+} 
+@keyframes typewriter {
+    to {transform: translateX(calc(1ch*var(--label-maxchars)));}
+}
+
+/* Hide wheel and display list for mobile */
+@media (max-width: 50em) {
+    .hero__skills {
+        display: none;
+    }
+}
+/* Mobile first */
+@media (min-width: 412px) {
+    .hero__skills {
+        scale: 0.8;
+    }
+}
+@media (min-width: 1100em) {
+    .hero__skills {
+        scale: 0.9;
+    }
+}
+@media (min-width: 1250px) {
+    .hero__skills {
+        scale: 1;
+    }
+}
+
+/* -------------- Individual node styling -------------- */
+.sk-html {
+    --radius: var(--r);
+    --angle: var(--html-angle);
+    transform: translate(calc(var(--radius)*cos(var(--angle))), calc(-1*var(--radius)*sin(var(--angle))));
+}
+
+.html-ln {
+    --width: calc(var(--r) - 2em);
+    --angle: var(--html-angle);
+    width: var(--width);
+    transform: translateX(calc(0.5*var(--width))) rotate(calc(-1*var(--angle)));
+}
+
+.sk-css {
+    --radius: var(--r);
+    --angle: var(--css-angle);
+    transform: translate(calc(var(--radius)*cos(var(--angle))), calc(-1*var(--radius)*sin(var(--angle))));   
+}
+.css-ln {
+    --width: calc(var(--r) - 2em);
+    --angle: var(--css-angle);
+    width: var(--width);
+    transform: translateX(calc(0.5*var(--width))) rotate(calc(-1*var(--angle)));
+}
+
+.sk-js {
+    --radius: var(--r);
+    --angle: var(--js-angle);
+    transform: translate(calc(var(--radius)*cos(var(--angle))), calc(-1*var(--radius)*sin(var(--angle))));
+}
+.js-ln {
+    --width: calc(var(--r) - 2em);
+    --angle: var(--js-angle);
+    width: var(--width);
+    transform: translateX(calc(0.5*var(--width))) rotate(calc(-1*var(--angle)));
+}
+
+.sk-git {
+    --radius: var(--r);
+    --angle: var(--git-angle);
+    transform: translate(calc(var(--radius)*cos(var(--angle))), calc(-1*var(--radius)*sin(var(--angle))));
+}
+.git-ln {
+    --width: calc(var(--r) - 2em);
+    --angle: var(--git-angle);
+    width: var(--width);
+    transform: translateX(calc(0.5*var(--width))) rotate(calc(-1*var(--angle)));
+}
+
+.sk-react {
+    --radius: var(--r);
+    --angle: var(--react-angle);
+    transform: translate(calc(var(--radius)*cos(var(--angle))), calc(-1*var(--radius)*sin(var(--angle))));
+}
+.react-ln {
+    --width: var(--r);
+    --angle: var(--react-angle);
+    width: var(--width);
+    transform: translateX(calc(0.5*var(--width))) rotate(calc(-1*var(--angle)));
+}
+
+.sk-bootstrap {
+    --radius: var(--r);
+    --angle: var(--bootstrap-angle);
+    transform: translate(calc(var(--radius)*cos(var(--angle))), calc(-1*var(--radius)*sin(var(--angle))));
+}
+.bootstrap-ln {
+    --width: calc(var(--r) - 2em);
+    --angle: var(--bootstrap-angle);
+    width: var(--width);
+    transform: translateX(calc(0.5*var(--width))) rotate(calc(-1*var(--angle)));
+}

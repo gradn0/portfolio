@@ -1,0 +1,98 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 0;
+    position: relative;
+    z-index: 999;
+}
+
+.header__links {
+    display: none;
+    margin-top: 0.3em;
+    margin-right: 4em;
+}
+
+#logo {
+    font-family: var(--ff-logo);
+    font-size: var(--fs-6xl);
+    cursor: pointer;
+    margin-left: 1em;
+}
+
+#logo span {
+    color: var(--clr-accent-500);
+}
+
+.header__left {
+    display: flex;
+    gap: 3em;
+    align-items: center;
+    min-width: 364px;
+}
+
+#theme-button {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    border: none;
+    background: white;
+    animation: rotate180b 0.7s ease-in-out forwards;
+    cursor: pointer;
+}
+
+#theme-button img {
+    overflow: hidden;
+    border-radius: inherit;
+}
+
+.header__links {
+    display: flex;
+    list-style: none;
+    gap: 2.5em;
+    font-size: var(--fs-nav);
+    padding-top: 0.1em;
+}
+
+.header__links a{
+    color: var(--clr-800);
+    transition: all 0.05s;
+    position: relative;
+}
+
+.header__links a::before{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: -0.3em;
+    left: 0;
+    background-color: var(--clr-accent-500);
+    transform: scaleX(0);
+    transition: transform 0.1s ease-in;
+}
+
+.header__links a:hover::before {
+    transform: scaleX(1);
+}
+
+.header__button {
+    transform: translateY(-0.44em);
+}
+
+.verticalbar{
+    border-right: 1.4px solid var(--clr-dark);
+}
+
+@keyframes rotate180 {
+    to {transform: rotate(180deg);}
+} 
+@keyframes rotate180b {
+    from {transform: rotate(180deg);}
+    to {transform: rotate(360deg);}
+}
+@keyframes fastrotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(900deg);}
+}
