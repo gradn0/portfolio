@@ -1,6 +1,25 @@
 export default function ui() {
     /* theme button */
     const button = document.getElementById('theme-button');
+    const root = document.querySelector(':root');
+    let darkMode = false;
+
+    function setTheme () {
+        if (!darkMode) {
+            root.style.setProperty('--clr-dark', 'var(--clr-lt)');
+            root.style.setProperty('--clr-light', 'var(--clr-dk)');
+            root.style.setProperty('--clr-shadow', 'var(--clr-shadow-dk)');
+            root.style.setProperty('--clr-card', 'var(--clr-800)');
+            darkMode = true;
+        }else {
+            root.style.setProperty('--clr-dark', 'var(--clr-dk)');
+            root.style.setProperty('--clr-light', 'var(--clr-lt)');
+            root.style.setProperty('--clr-shadow', 'var(--clr-shadow-lt)');
+            root.style.setProperty('--clr-card', 'var(--clr-lt)');
+            darkMode = false;
+        }
+        
+    }
 
     function resetButton() {
         button.style.animation = 'none';
@@ -10,8 +29,9 @@ export default function ui() {
     }
 
     button.addEventListener('click', () => {
+        setTheme();
         button.style.animation = 'fastrotate 0.8s ease-in-out forwards';
-        button.addEventListener('animationend', resetButton);
+        button.addEventListener('animationend', resetButton);  
     })
 
     /* hover node */
@@ -44,7 +64,7 @@ export default function ui() {
         /* Animate */
         if (prevNode === undefined || e.target.src !== prevNode.src){
             resetLabel();
-            labelOverlay.style.background = 'white';
+            labelOverlay.style.background = 'var(--clr-light)';
         }
         labelOverlay.style.animation = 'typewriter var(--typing-speed) steps(var(--label-maxchars)) forwards';
         labelOverlay.addEventListener('animationend', resetLabel);

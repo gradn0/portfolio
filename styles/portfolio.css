@@ -1,5 +1,6 @@
 .portfolio {
     margin-top: 6em;
+    color: var(--clr-dark);
 }
 .portfolio p {
     max-width: 70ch;
@@ -7,12 +8,17 @@
 }
 
 .portfolio__project {
-    height: 18em;
     padding: 1em;
     box-shadow: 0.1em 0.1em 0.5em -1px rgba(0,0,0,0.3);
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    text-align: center;
     transition: all 0.03s ease;
     -webkit-tap-highlight-color: transparent;
+    background: var(--clr-card);
 }
 .portfolio__project:hover {
     box-shadow: 0.2em 0.2em 0.5em 0px rgba(0,0,0,0.3);
@@ -20,3 +26,20 @@
 .portfolio__project:active {
     outline: none;
 }
+
+.portfolio__project img {
+    border-radius: 0.5em;
+}
+.portfolio__project p {
+    font-size: var(--fs-subheading);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-subheading);
+}
+.tags {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+    opacity: 0.6;
+    font-size: var(--fs-body);
+}
+

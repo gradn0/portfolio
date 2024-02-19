@@ -1,6 +1,7 @@
 .hero {
     margin-top: 1em;
     margin-bottom: 2em;
+    color: var(--clr-dark);
 }
 
 .hero__title {
@@ -27,8 +28,7 @@
 
 .hero__title-wrapper {
     padding: 1em;
-    width: clamp(100vw, auto, auto);
-    
+    width: clamp(100vw, auto, auto); 
 }
 
 /* Mobile Skills */
@@ -48,7 +48,7 @@
     border-radius: 50%; 
     cursor: pointer;
     animation: listGrow 0.4s ease-in-out forwards;
-    box-shadow: 0.1em 0.1em 1em 0em #888686;
+    box-shadow: 0.1em 0.1em 1em 0em var(--clr-shadow);
 }
 
 .skill-mobile img {

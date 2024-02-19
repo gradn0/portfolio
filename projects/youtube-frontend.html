@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kristi&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <!-- Links -->
+    <link rel="stylesheet" href="../styles/style.css">
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header__left">
+        <a href="#home"><p id="logo"><span>&lt;</span>JD<span>/></span></p></a>
+        <span class="desktop-only"><button id="theme-button"><img src="/images/ui/theme.png" alt=""></button></span>
+      </div>
+      
+      <nav class="desktop-only">
+        <ul class="header__links">
+          <li><a href="#home" class="header__link">Home</a></li>
+          <li><a href="#about" class="header__link">About</a></li>
+          <li><a href="#portfolio" class="header__link">Porfolio</a></li>
+          <li><span class="verticalbar"></span></li>
+          <a href="CV.pdf" target="_blank"><button class="header__button | button">CV<span class="animated__button-overlay"></span></button></a>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Social Tab -->
+    <a href="https://github.com/gradn0" target="_blank">
+    <div class="social">
+      <img id="github-icon" src="../images/social/github-mark.png" alt="github link">
+    </div></a>  
+
+    <script type="module" src="../src/main.js"></script>
+  </body>
+</html>
+

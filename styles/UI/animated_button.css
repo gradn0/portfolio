@@ -10,7 +10,7 @@
     background-color: transparent;
     cursor: pointer;
     position: relative;
-    z-index: 0;
+    color: var(--clr-dark);
 }
 
 .button::before,
@@ -46,7 +46,7 @@
 
 /* Bottom and Left*/
 
-.header__button-overlay {
+.animated__button-overlay {
     width: 5em;
     height: 2.5em;
     border: none;
@@ -55,8 +55,8 @@
     left: 0;
     background: none;
 }
-.header__button-overlay::before,
-.header__button-overlay::after{
+.animated__button-overlay::before,
+.animated__button-overlay::after{
     content: '';
     position: absolute;
     top: 0;
@@ -67,19 +67,19 @@
     z-index: -2;
 }
 
-.header__button-overlay::before {
+.animated__button-overlay::before {
     border-bottom: 2px solid var(--button-border-clr);
     transform: scale(0, 1);
     transform-origin: right center;
 }
-.header__button-overlay:hover::before {
+.animated__button-overlay:hover::before {
     transform: scale(1, 1);
 }
-.header__button-overlay::after {
+.animated__button-overlay::after {
     border-left: 1px solid var(--button-border-clr);
     transform: scale(1, 0);
     transform-origin: bottom center;
 }
-.header__button-overlay:hover::after {
+.animated__button-overlay:hover::after {
     transform: scale(1, 1);
 }

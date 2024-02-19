@@ -1,8 +1,66 @@
 .about {
-    background-color: var(--clr-light);
+    color: var(--clr-dark);
 }
 .about p {
     max-width: 55ch;
     font-size: var(--fs-body);
     padding-bottom: 2em;
+}
+
+.about__details,
+.about__blurb {
+    padding: 6em 2em;
+    position: relative;
+}
+
+.about__details {
+    text-align: start;
+}
+
+.about__details p{
+    text-align: start;
+    opacity: 0.6;
+}
+
+.about__blurb p {
+    width: 40ch;
+}
+
+.about__skills {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    opacity: 0.6;
+}
+
+.about__button {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -2em);
+}
+
+.about__wrapper {
+    position: relative;
+    isolation: isolate;
+    gap: 5em;
+}
+
+#about__overlay {
+    inset: 0;
+    position: absolute;
+    width: 50%;
+    z-index: 1;
+    border-radius: 10%;
+    background: var(--clr-light);
+}
+
+@keyframes slide {
+    from {left: 0;}
+    to {left: 50%;}
+}
+@keyframes warp {
+    50% {transform: scaleX(0.6);}
+    100% {transform: scaleX(1);}
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nathan Gradden</title>
+    <title>Portfolio</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,28 +25,34 @@
 
   <body>
     <!-- Header -->
-    <header class="header ">
+    <header class="header">
       <div class="header__left">
-        <p id="logo"><span>&lt;</span>JD<span>/></span></p>
+        <a href="#home"><p id="logo"><span>&lt;</span>JD<span>/></span></p></a>
         <span class="desktop-only"><button id="theme-button"><img src="/images/ui/theme.png" alt=""></button></span>
       </div>
       
       <nav class="desktop-only">
         <ul class="header__links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Porfolio</a></li>
+          <li><a href="#home" class="header__link">Home</a></li>
+          <li><a href="#about" class="header__link">About</a></li>
+          <li><a href="#portfolio" class="header__link">Porfolio</a></li>
           <li><span class="verticalbar"></span></li>
-          <button class="header__button | button">CV<span class="header__button-overlay"></span></button> 
+          <a href="CV.pdf" target="_blank"><button class="header__button | button">CV<span class="animated__button-overlay"></span></button></a>
         </ul>
       </nav>
     </header>
 
+    <!-- Social Tab -->
+    <a href="https://github.com/gradn0" target="_blank">
+    <div class="social">
+      <img id="github-icon" src="images/social/github-mark.png" alt="github link">
+    </div></a>  
+
     <!-- Hero -->
-    <div class="hero | equal-columns container">
+    <div id="home" class="hero | equal-columns container">
       <div class="hero__title | center-item">
         <div class="hero__title-wrapper">
-          <h1>Nathan Gradden</h1>
+          <h1>Name Here</h1>
           <h2>Front-end Developer</h2>
           <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin 
             literature from 45 BC, making it over 2000 years old. Richard McClintock</p>
@@ -84,26 +90,74 @@
     </div>
 
     <!-- About -->
-    <div class="about | container section">
-      <h2 class="heading">About</h2>
-      <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin 
-        literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College 
-        in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through 
-        the cites of the word in classical literature, discovered the undoubtable source</p>
+    <div id="about" class="about | container section">
+      <h2 class="section-heading">About</h2>
+      <div class="about__wrapper | equal-columns">
+        <!-- <div id="about__overlay"></div> -->
+        <div class="about__blurb">
+          <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin 
+            literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College 
+            in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through 
+            the cites of the word in classical literature, discovered the undoubtable source</p>
+            <button class="about__button | button">Details<span class="animated__button-overlay"></span></button>
+        </div>
+        <div class="about__details">
+          <h3 class="content-heading">Education</h3>
+          <p>BSc (Hons) Physics 1:1</p><br/>
+          <h3 class="content-heading">Skills</h3>
+          <ul class="about__skills">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+            <li>Git</li>
+            <li>Python</li>
+          </ul>
+          <button class="about__button | button">Overview<span class="animated__button-overlay"></span></button>
+        </div>
+      </div>
     </div>
 
     <!-- Portfolio -->
-    <div class="portfolio | container section">
-      <h2 class="heading">Portfolio</h2>
+    <div id="portfolio" class="portfolio | container section">
+      <h2 class="section-heading">Portfolio</h2>
       <div class="portfolio__projects | grid container">
+
         <div class="portfolio__project">
-          <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
+          <a href=""><img src="/images/projects/portfolio/thumbnail.PNG" alt=""></a>
+          <p>Portfolio Website</p>
+          <ul class="tags">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+          </ul>
         </div>
+
         <div class="portfolio__project">
-          <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
+          <a href=""><img src="images/projects/architectural site/thumbnail.PNG" alt=""></a>
+          <p>Architectural Website</p>
+          <ul class="tags">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+          </ul>
         </div>
+
         <div class="portfolio__project">
-          <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
+          <a href=""><img src="images/projects/youtube-frontend/thumbnail.PNG" alt=""></a>
+          <p>Alternative YouTube Frontend</p>
+          <ul class="tags">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>ReactJS</li>
+          </ul>
+        </div>
+
+        <div class="portfolio__project">
+          <a href=""><img src="images/projects/mail-client/thumbnail.PNG" alt=""></a>
+          <p>CLI E-Mail Client</p>
+          <ul class="tags">
+            <li>Python</li>
+          </ul>
         </div>
       </div>
     </div>

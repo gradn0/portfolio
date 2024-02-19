@@ -18,6 +18,7 @@
     font-size: var(--fs-6xl);
     cursor: pointer;
     margin-left: 1em;
+    color: var(--clr-dark);
 }
 
 #logo span {
@@ -54,13 +55,14 @@
     padding-top: 0.1em;
 }
 
-.header__links a{
+.header__link {
     color: var(--clr-800);
     transition: all 0.05s;
     position: relative;
+    color: var(--clr-dark);
 }
 
-.header__links a::before{
+.header__link::before {
     content: "";
     position: absolute;
     display: block;
@@ -73,7 +75,7 @@
     transition: transform 0.1s ease-in;
 }
 
-.header__links a:hover::before {
+.header__link:hover::before {
     transform: scaleX(1);
 }
 
@@ -83,6 +85,7 @@
 
 .verticalbar{
     border-right: 1.4px solid var(--clr-dark);
+    border-color: var(--clr-dark);
 }
 
 @keyframes rotate180 {
