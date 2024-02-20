@@ -1,7 +1,6 @@
 .hero {
-    margin-top: 1em;
-    margin-bottom: 2em;
     color: var(--clr-dark);
+    margin-bottom: 3em;
 }
 
 .hero__title {

@@ -1,26 +1,17 @@
 export default function about () {
-    const overlay = document.getElementById('about__overlay');
-
-    let overlayDefault = true;
-
-    function resetAnimation() {
-        overlay.style.animation = 'none';
-        overlay.offsetHeight;
-        overlay.style.animation = null;
-        overlay.removeEventListener('animationend', resetAnimation)
-    }
+    const card = document.getElementById('about__card');
+    let flipped = false;
 
     document.addEventListener('click', (e) => {
-        if (!e.target.parentNode.classList.contains('about__button')) return;
-
-        if (overlayDefault){
-            overlay.style.animation = 'slide 0.3s ease-in-out forwards, warp 0.3s ease-in-out forwards';
-            overlay.style.left = '50%';
+        console.log(e.target);
+        if(!e.target.classList.contains('flip-button')) return;
+        if(!flipped){
+            card.style.transform = 'rotateY(180deg)';
+            flipped = true;
         }else{
-            overlay.style.animation = 'slide 0.3s ease-in-out reverse, warp 0.3s ease-in-out forwards';
-            overlay.style.left = '0';
+            card.style.transform = 'rotateY(0deg)';
+            flipped = false;
         }
-        overlay.addEventListener('animationend', resetAnimation);
-        overlayDefault = !overlayDefault;
-    });
+        
+    })
 } 

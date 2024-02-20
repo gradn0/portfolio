@@ -92,27 +92,31 @@
     <!-- About -->
     <div id="about" class="about | container section">
       <h2 class="section-heading">About</h2>
-      <div class="about__wrapper | equal-columns">
-        <!-- <div id="about__overlay"></div> -->
-        <div class="about__blurb">
-          <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin 
-            literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College 
-            in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through 
-            the cites of the word in classical literature, discovered the undoubtable source</p>
-            <button class="about__button | button">Details<span class="animated__button-overlay"></span></button>
-        </div>
-        <div class="about__details">
-          <h3 class="content-heading">Education</h3>
-          <p>BSc (Hons) Physics 1:1</p><br/>
-          <h3 class="content-heading">Skills</h3>
-          <ul class="about__skills">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Javascript</li>
-            <li>Git</li>
-            <li>Python</li>
-          </ul>
-          <button class="about__button | button">Overview<span class="animated__button-overlay"></span></button>
+      <div class="about-container">
+        <div id="about__card" class="about__card">
+
+            <div class="about__front">
+              <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin 
+                literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College 
+                in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through 
+                the cites of the word in classical literature, discovered the undoubtable source</p>
+                <button class="about__button | button">Details<span class="animated__button-overlay | flip-button"></span></button>
+            </div>
+
+            <div class="about__back">
+              <h3 class="content-heading">Education</h3>
+              <p>BSc (Hons) Physics 1:1</p><br/>
+              <h3 class="content-heading">Skills</h3>
+              <ul class="about__skills">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+                <li>Git</li>
+                <li>Python</li>
+              </ul>
+              <button class="about__button | button">Overview<span class="animated__button-overlay | flip-button"></span></button>
+            </div>
+                
         </div>
       </div>
     </div>
@@ -123,7 +127,8 @@
       <div class="portfolio__projects | grid container">
 
         <div class="portfolio__project">
-          <a href=""><img src="/images/projects/portfolio/thumbnail.PNG" alt=""></a>
+          <a href="projects/portfolio.html"></a>
+          <img src="/images/projects/portfolio/thumbnail.PNG" alt="">
           <p>Portfolio Website</p>
           <ul class="tags">
             <li>HTML</li>
@@ -133,7 +138,8 @@
         </div>
 
         <div class="portfolio__project">
-          <a href=""><img src="images/projects/architectural site/thumbnail.PNG" alt=""></a>
+          <a href="projects/architecture.html"></a>
+          <img src="images/projects/architectural site/thumbnail.PNG" alt="">
           <p>Architectural Website</p>
           <ul class="tags">
             <li>HTML</li>
@@ -143,7 +149,8 @@
         </div>
 
         <div class="portfolio__project">
-          <a href=""><img src="images/projects/youtube-frontend/thumbnail.PNG" alt=""></a>
+          <a href="projects/youtube-frontend.html"></a>
+          <img src="images/projects/youtube-frontend/thumbnail.PNG" alt="">
           <p>Alternative YouTube Frontend</p>
           <ul class="tags">
             <li>HTML</li>
@@ -153,7 +160,8 @@
         </div>
 
         <div class="portfolio__project">
-          <a href=""><img src="images/projects/mail-client/thumbnail.PNG" alt=""></a>
+          <a href="projects/mail-client.html"></a>
+          <img src="images/projects/mail-client/thumbnail.PNG" alt="">
           <p>CLI E-Mail Client</p>
           <ul class="tags">
             <li>Python</li>

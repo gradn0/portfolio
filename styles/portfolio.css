@@ -1,24 +1,22 @@
 .portfolio {
-    margin-top: 6em;
+    margin-top: 2em;
     color: var(--clr-dark);
-}
-.portfolio p {
-    max-width: 70ch;
-    font-size: var(--fs-body);
 }
 
 .portfolio__project {
-    padding: 1em;
-    box-shadow: 0.1em 0.1em 0.5em -1px rgba(0,0,0,0.3);
-    cursor: pointer;
     display: flex;
     flex-direction: column;
     gap: 1em;
     align-items: center;
     text-align: center;
+    padding: 1em;
+    background: var(--clr-card);
+    cursor: pointer;
+    box-shadow: 0.1em 0.1em 0.5em -1px rgba(0,0,0,0.3);
     transition: all 0.03s ease;
     -webkit-tap-highlight-color: transparent;
-    background: var(--clr-card);
+    position: relative;
+    isolation: isolate;
 }
 .portfolio__project:hover {
     box-shadow: 0.2em 0.2em 0.5em 0px rgba(0,0,0,0.3);
@@ -26,7 +24,6 @@
 .portfolio__project:active {
     outline: none;
 }
-
 .portfolio__project img {
     border-radius: 0.5em;
 }
@@ -35,6 +32,12 @@
     font-weight: var(--fw-bold);
     font-size: var(--fs-subheading);
 }
+.portfolio__project a {
+    position: absolute;
+    z-index: 2;
+    inset: 0;
+}
+
 .tags {
     list-style: none;
     display: flex;

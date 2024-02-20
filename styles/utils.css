@@ -42,6 +42,9 @@
     margin-bottom: 0.3em;
     color: var(--crl-dark);
 }
+.light-text {
+    color: var(--clr-light);
+}
 
 
 /* Misc */
