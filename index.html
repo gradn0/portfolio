@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <title>John Doe | Web Developer</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,27 +23,43 @@
     <link rel="stylesheet" href="styles/style.css">
   </head>
 
-  <body>
+  <body id="header">
     <!-- Header -->
     <header class="header">
       <div class="header__left">
-        <a href="#home"><p id="logo"><span>&lt;</span>JD<span>/></span></p></a>
+        <a href="#header"><p id="logo"><span>&lt;</span>JD<span>/></span></p></a>
         <span class="desktop-only"><button id="theme-button"><img src="/images/ui/theme.png" alt=""></button></span>
       </div>
       
       <nav class="desktop-only">
         <ul class="header__links">
-          <li><a href="#home" class="header__link">Home</a></li>
+          <li><a href="#header" class="header__link">Home</a></li>
           <li><a href="#about" class="header__link">About</a></li>
           <li><a href="#portfolio" class="header__link">Porfolio</a></li>
           <li><span class="verticalbar"></span></li>
           <a href="CV.pdf" target="_blank"><button class="header__button | button">CV<span class="animated__button-overlay"></span></button></a>
         </ul>
       </nav>
+
+      <div id="hamburger">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="var(--clr-dark)" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>                
+      </div>
     </header>
 
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobilemenu mobile-hidden">
+      <ul class="mobilemenu__links">
+        <li class="mobile_link"><a href="#home" class="header__link">Home</a></li>
+        <li class="mobile_link"><a href="#about" class="header__link">About</a></li>
+        <li class="mobile_link"><a href="#portfolio" class="header__link">Porfolio</a></li>
+        <a href="CV.pdf" target="_blank"><button class="header__button | button">CV<span id="mobile-button" class="animated__button-overlay"></span></button></a>
+      </ul>
+    </div>
+
     <!-- Social Tab -->
-    <a href="https://github.com/gradn0" target="_blank">
+    <a href="https://github.com/" target="_blank">
     <div class="social">
       <img id="github-icon" src="images/social/github-mark.png" alt="github link">
     </div></a>  
@@ -52,10 +68,10 @@
     <div id="home" class="hero | equal-columns container">
       <div class="hero__title | center-item">
         <div class="hero__title-wrapper">
-          <h1>Name Here</h1>
+          <h1>John Doe</h1>
           <h2>Front-end Developer</h2>
-          <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin 
-            literature from 45 BC, making it over 2000 years old. Richard McClintock</p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            Nisi aut laboriosam architecto impedit nobis modi, temporibus voluptatum officia corporis eos omnis?</p>
           <!-- Skills List --> 
           <div class="hero__skills-mobile | mobile-only">
             <ul class="hero__list-items">
@@ -68,6 +84,7 @@
           </div>
         </div>
       </div>
+
       <!-- Skills wheel -->
       <div class="hero__skills">
         <div class="skills-text-container">
@@ -96,21 +113,24 @@
         <div id="about__card" class="about__card">
 
             <div class="about__front">
-              <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin 
-                literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College 
-                in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through 
-                the cites of the word in classical literature, discovered the undoubtable source</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem labore similique error dolores! Labore cum eius est eum, quae natus nisi illum enim a atque, 
+                inventore aliquam minus provident numquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. <br/><br/> Necessitatibus distinctio et possimus eum. Numquam enim minus consequuntur 
+                id quidem vero, quos velit, totam rerum obcaecati tempora aspernatur assumenda! Accusantium, a?
+              </p>
                 <button class="about__button | button">Details<span class="animated__button-overlay | flip-button"></span></button>
             </div>
 
             <div class="about__back">
               <h3 class="content-heading">Education</h3>
-              <p>BSc (Hons) Physics 1:1</p><br/>
+              <p>{qualifications}</p><br/>
               <h3 class="content-heading">Skills</h3>
               <ul class="about__skills">
                 <li>HTML</li>
                 <li>CSS</li>
                 <li>Javascript</li>
+                <li>ReactJS</li>
+                <li>Sass</li>
+                <li>Bootstrap</li>
                 <li>Git</li>
                 <li>Python</li>
               </ul>

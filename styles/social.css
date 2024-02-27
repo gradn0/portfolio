@@ -1,6 +1,6 @@
 .social {
     position: fixed;
-    right: clamp(0.5em, 1.8vw, 4em);
+    right: clamp(1em, 1.8vw, 4em);
     bottom: 2em;
     background-color: var(--clr-accent-500);
     padding: 1em;

@@ -12,6 +12,7 @@
     font-size: var(--fs-title);
     font-weight: var(--fw-bold);
     letter-spacing: -0.8px;
+    margin-bottom: 0.2em;
 }
 
 .hero__title h2 {

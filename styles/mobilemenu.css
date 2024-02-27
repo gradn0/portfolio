@@ -1,0 +1,35 @@
+.mobilemenu {
+    position: fixed;
+    top: 6.6em;
+    padding-top: 10em;
+    left: 0;
+    background: var(--clr-light);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    z-index: 10;
+}
+
+.mobilemenu__links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+
+.mobile-hidden {
+    display: none;
+}
+
+@keyframes slideIn {
+    from {transform: translateX(150em)};
+    to {transform: translateX(0);}
+}
+
+@keyframes slideOut {
+    from {transform: translateX(0)};
+    to {transform: translateX(150em);}
+}

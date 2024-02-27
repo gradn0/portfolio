@@ -3,8 +3,10 @@
     justify-content: space-between;
     align-items: center;
     padding: 0.5em 0;
-    position: relative;
-    z-index: 999;
+    position: sticky;
+    top: 0;
+    background: var(--clr-light);
+    z-index: 3;
 }
 
 .header__links {
@@ -29,7 +31,6 @@
     display: flex;
     gap: 3em;
     align-items: center;
-    min-width: 364px;
 }
 
 #theme-button {
@@ -88,6 +89,13 @@
     border-color: var(--clr-dark);
 }
 
+#hamburger {
+    min-width: 1.5em;
+    min-height: 1.5em;
+    cursor: pointer;
+    margin-right: 2.5em;
+}
+
 @keyframes rotate180 {
     to {transform: rotate(180deg);}
 } 
@@ -98,4 +106,10 @@
 @keyframes fastrotate {
     from {transform: rotate(0deg);}
     to {transform: rotate(900deg);}
+}
+
+@media (min-width: 50em) {
+    #hamburger {
+        display: none;
+    }
 }

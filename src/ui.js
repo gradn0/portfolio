@@ -2,23 +2,38 @@ export default function ui() {
     /* theme button */
     const button = document.getElementById('theme-button');
     const root = document.querySelector(':root');
-    let darkMode = false;
+    
+    if (localStorage.getItem('darkTheme') === 'true') {
+        setDark();
+    }
 
-    function setTheme () {
-        if (!darkMode) {
-            root.style.setProperty('--clr-dark', 'var(--clr-lt)');
-            root.style.setProperty('--clr-light', 'var(--clr-dk)');
-            root.style.setProperty('--clr-shadow', 'var(--clr-shadow-dk)');
-            root.style.setProperty('--clr-card', 'var(--clr-800)');
-            darkMode = true;
-        }else {
-            root.style.setProperty('--clr-dark', 'var(--clr-dk)');
+    if (localStorage.getItem('darkTheme') === null) {
+        setDark();
+        localStorage.setItem('darkTheme', true);
+    }
+
+    function setDark () {
+        root.style.setProperty('--clr-dark', 'var(--clr-lt)');
+        root.style.setProperty('--clr-light', 'var(--clr-dk)');
+        root.style.setProperty('--clr-shadow', 'var(--clr-shadow-dk)');
+        root.style.setProperty('--clr-card', 'var(--clr-800)');
+    }
+
+    function setLight () {
+        root.style.setProperty('--clr-dark', 'var(--clr-dk)');
             root.style.setProperty('--clr-light', 'var(--clr-lt)');
             root.style.setProperty('--clr-shadow', 'var(--clr-shadow-lt)');
             root.style.setProperty('--clr-card', 'var(--clr-lt)');
-            darkMode = false;
-        }
-        
+    }
+
+    function toggleTheme () {
+        if (localStorage.getItem('darkTheme') === 'false') {
+            localStorage.setItem('darkTheme', true);
+            setDark();
+        } else {
+            localStorage.setItem('darkTheme', false);
+            setLight();
+        }    
     }
 
     function resetButton() {
@@ -29,7 +44,7 @@ export default function ui() {
     }
 
     button.addEventListener('click', () => {
-        setTheme();
+        toggleTheme();
         button.style.animation = 'fastrotate 0.8s ease-in-out forwards';
         button.addEventListener('animationend', resetButton);  
     })
